@@ -1,0 +1,9 @@
+{
+	"name": "gameboy",
+	"tree": {
+		"$path": "src",
+		"emulator": {
+			"$path": "../emulator"
+		}
+	}
+}

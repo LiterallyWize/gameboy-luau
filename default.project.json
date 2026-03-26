@@ -1,0 +1,9 @@
+{
+	"name": "gameboy",
+	"tree": {
+		"$path": "roblox/plugin/src",
+		"emulator": {
+			"$path": "roblox/emulator"
+		}
+	}
+}
