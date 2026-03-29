@@ -15,7 +15,7 @@ end
 function cpu.new(): CPU
 	return {
 		step = step,
-	} :: CPU
+	}
 end
 
 return cpu

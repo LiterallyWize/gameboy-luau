@@ -12,12 +12,13 @@ export type ROM = {
 
 local rom = {}
 
-local function read(self: ROM, address: number): number
+local function read(self: memory.Addressable, address: number): number
+	local self = self :: ROM
 	return 0
 end
 
-local function write(self: ROM, address: number, value: number): ()
-	return
+local function write(self: memory.Addressable, address: number, value: number): ()
+	local self = self :: ROM
 end
 
 local function step(self: ROM): ()
@@ -31,7 +32,7 @@ function rom.new(data: buffer): ROM
 		read = read,
 		write = write,
 		step = step,
-	} :: ROM
+	}
 end
 
 return rom

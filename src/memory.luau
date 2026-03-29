@@ -18,12 +18,13 @@ export type Memory = MemoryComponents & Addressable
 
 local memory = {}
 
-local function read(self: Memory, address: number): number
+local function read(self: Addressable, address: number): number
+	local self = self :: Memory
 	return 0
 end
 
-local function write(self: Memory, address: number, value: number): ()
-	return
+local function write(self: Addressable, address: number, value: number): ()
+	local self = self :: Memory
 end
 
 function memory.new(components: MemoryComponents): Memory
@@ -35,7 +36,7 @@ function memory.new(components: MemoryComponents): Memory
 
 		read = read,
 		write = write,
-	} :: Memory
+	}
 end
 
 return memory

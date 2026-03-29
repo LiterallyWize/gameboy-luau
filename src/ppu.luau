@@ -10,12 +10,13 @@ export type PPU = {
 
 local ppu = {}
 
-local function read(self: PPU, address: number): number
+local function read(self: memory.Addressable, address: number): number
+	local self = self :: PPU
 	return 0
 end
 
-local function write(self: PPU, address: number, value: number): ()
-	return
+local function write(self: memory.Addressable, address: number, value: number): ()
+	local self = self :: PPU
 end
 
 local function step(self: PPU): ()
@@ -27,7 +28,7 @@ function ppu.new(): PPU
 		read = read,
 		write = write,
 		step = step,
-	} :: PPU
+	}
 end
 
 return ppu

@@ -15,7 +15,7 @@ end
 function gameboy.new(): Gameboy
 	return {
 		cycle = cycle,
-	} :: Gameboy
+	}
 end
 
 return gameboy
